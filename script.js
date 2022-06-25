@@ -13,11 +13,11 @@ window.onload = () => {
 function getAdvice (){
 fetch("https://api.adviceslip.com/advice").then(response=> {
     return response.json();
-}).then(adviceData=>{
-    const Adviceobj = adviceData.slip
-    adviceText.textContent = Adviceobj.advice;
-    adviceNumber.textContent = Adviceobj.id;
-}).catch(error => {
-    console.log(error);
-})
+    }).then(adviceData=>{
+        const Adviceobj = adviceData.slip
+        adviceText.textContent = Adviceobj.advice;
+        adviceNumber.textContent = Adviceobj.id;
+        }).catch(error => {
+            console.log(error);
+        })
 }
